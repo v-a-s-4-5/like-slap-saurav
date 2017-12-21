@@ -1,0 +1,90 @@
+page-login {
+    .scroll-content{
+        background: color($colors,backgroundClr);
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #b2ceff;
+            padding: 20px;
+            width: 100%;
+            .text-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #ffffff;
+                font-weight: 300;
+               }
+               .text-input::-moz-placeholder { /* Firefox 19+ */
+                color: #ffffff;
+                font-weight: 300;
+               }
+               .text-input:-ms-input-placeholder { /* IE 10+ */
+                color: #ffffff;
+                font-weight: 300;
+               }
+               .text-input:-moz-placeholder { /* Firefox 18- */
+                color: #ffffff;
+                font-weight: 300;
+               }
+            .social-sec{
+                width: 100%;
+                float: left;
+                margin-bottom: 20px;
+                .img-sec{
+                    width: 58%;
+                    float: left;
+                }
+                .login-sec {
+                    color: #fff;
+                    font-size: 10px;
+                    padding: 32px 0;
+                    float: left;
+                    width: 19%;
+                    line-height: 15px;
+                    letter-spacing: 0.8px;
+                    text-align: left;
+                    margin: 0 3px;
+                }
+            }
+            .button {
+                padding: 25px 0;
+            }
+            .list-md .item-block .item-inner {
+                border: none;
+            }
+            ion-item.item-input {
+                background: transparent;
+                margin: 15px 0 0;
+                border: 1px solid #b2ceff !important;
+                color: #fff;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .login-btn {
+                border-bottom: 1px solid #fff;
+                .button {
+                    background: #fff;
+                    border-radius: 3px;
+                    margin: 25px 0;
+                    font-weight: 900;
+                }
+            }
+            ion-label.label {
+                font-size: 20px;
+            }
+            .or-label {
+                position: relative;
+                bottom: 22px;
+                p {
+                    width: 45px;
+                    background: color($colors,backgroundClr);
+                    color: color($colors,light);
+                }
+            }
+            .register-btn{
+                .button {
+                    background: #315787;
+                }
+            } 
+        }
+    }
+}

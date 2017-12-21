@@ -1,0 +1,27 @@
+page-confirmation {
+    .scroll-content{
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #b2ceff;
+            width: 100%;
+            .inner-sec{
+                padding: 20px;
+                .button {
+                    padding: 25px 0;
+                }
+                .confirm-btn {
+                    margin: 12px 0;
+                    width: 100%;
+                    float: left;
+                    .button {
+                        margin: 25px 0;
+                    }
+                }
+                .lower-sec {
+                    margin: 8px 0 0;
+                }
+            }
+        }
+    }
+}
