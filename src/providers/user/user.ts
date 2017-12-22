@@ -21,12 +21,7 @@ export class UserProvider {
       'user':user,
       'action': 101
     });
-    this.http.post(url,postjsondata,{headers:header}).subscribe( res=> {
-		if(res.response == 'success'){
-			console.log('data true');
-			localStorage.setItem('id', res.session);
-		}
-	}, err => console.log(err));
+    return this.http.post(url,postjsondata,{headers:header});
   }
   doRegister(user){
     console.log(user);
@@ -61,6 +56,18 @@ export class UserProvider {
     });
     this.http.post(url,postjsondata,{headers:header}).subscribe( res=> console.log(res), err => console.log(err));
 	
+  }
+  doLogout(){
+	let id = localStorage.getItem('id');
+	localStorage.removeItem('id');
+	let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+    let header = new Headers();
+    header.append('Content-Type','application/x-www-form-urlencoded');
+    let postjsondata = 'data='+JSON.stringify({
+      'id':id,
+      'action': 104
+    });
+    return this.http.post(url,postjsondata,{headers:header});
   }
   
 }
