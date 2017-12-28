@@ -27,11 +27,14 @@ userlogin = {
   this.msg = this.navParams.get('msg');
   }
   login(){
+	  
+	  
+	  
 	 this.user.doLogin(this.userlogin).subscribe( res=> {
 		
 		let response = JSON.parse(res['_body']);
-		console.log(response.success);
-		console.log(response.session);
+		// console.log(response.success);
+		// console.log(response.session);
 		if(response.success == 'true'){
 			console.log('data true');
 			localStorage.setItem('id', response.session);
@@ -40,6 +43,8 @@ userlogin = {
 	}, err => console.log(err));
 	 
   }
+  
+  
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

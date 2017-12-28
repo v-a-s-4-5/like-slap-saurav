@@ -13,6 +13,9 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { UserProvider } from '../providers/user/user';
 import { ProfilePage } from '../pages/profile/profile';
+import { AddpostsPage } from '../pages/addposts/addposts';
+import { DisplaypostsPage } from '../pages/displayposts/displayposts';
+import { UserpostsPage } from '../pages/userposts/userposts';
 @NgModule({
   declarations: [
     MyApp,
@@ -21,7 +24,10 @@ import { ProfilePage } from '../pages/profile/profile';
     RegisterPage,
     ConfirmationPage,
 	ProfilePage,
-    WelcomePage
+    WelcomePage,
+    AddpostsPage,
+    DisplaypostsPage,
+    UserpostsPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,10 @@ import { ProfilePage } from '../pages/profile/profile';
     RegisterPage,
     ConfirmationPage,
 	ProfilePage,
-    WelcomePage
+    WelcomePage,
+    AddpostsPage,
+    DisplaypostsPage,
+    UserpostsPage
   ],
   providers: [
     StatusBar,

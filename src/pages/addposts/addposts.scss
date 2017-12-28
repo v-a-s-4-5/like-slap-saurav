@@ -1,0 +1,97 @@
+page-addposts {
+    .scroll-content{
+        background: color($colors,backgroundClr);
+        background: #fff;
+        .text-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #000;
+            font-weight: 300;
+           }
+           .text-input::-moz-placeholder { /* Firefox 19+ */
+            color: #000;
+            font-weight: 300;
+           }
+           ion-label.label.label-md.label-md-light h3 {
+            color: #000;
+        }
+        button.button.button-md.button-outline.button-outline-md.button-block.button-block-md.button-outline-md-backgroundClr {
+            background: #000;
+        }
+        .button-outline-md-backgroundClr {
+            border-color: #000;
+            color: #fff;
+            background-color: transparent;
+        }
+           .text-input:-ms-input-placeholder { /* IE 10+ */
+            color: #000;
+            font-weight: 300;
+           }
+           .text-input:-moz-placeholder { /* Firefox 18- */
+            color: #000;
+            font-weight: 300;
+           }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 20px;
+            width: 100%;
+            .button {
+                padding: 25px 0;
+            }
+            .list-md .item-block .item-inner {
+                border: none;
+            }
+            ion-item.item-input {
+                background: transparent;
+                margin: 15px 0 0;
+                border: 1px solid #000 !important;
+                color: color($colors, light);
+            }
+			ion-item.uploadimg.item-input {
+				border: 2px solid #000 !important;
+				height: 110px;
+				width: 80px;
+				margin: 0 auto;
+				display: table;
+				border-radius: 50%;
+			}
+			.uploadimg input {
+				opacity: 0;
+				height: 107px;
+				width: 80px;
+				margin: 0 auto;
+				display: table;
+			}
+            a {
+                text-decoration: none;
+                color: color($colors, light);
+            }
+            .confirmation-text {
+                p {
+                    color: color($colors, light);
+                    font-size: 11px;
+                    font-weight: 300;
+                }
+            }
+            .login-btn {
+                .button {
+                    background: color($colors, light);
+                    border-radius: 3px;
+                    margin: 25px 0;
+                    font-weight: 900;
+                }
+            }
+            .sign-in-sec {
+                color: color($colors, light);
+                font-weight: 300;
+            }
+        }
+    }
+	.uploadimgicon {
+		   font-size: 52px;
+		position: absolute;
+		top: 30px;
+		color: #000;
+		transform: translateX(-50%);
+	}
+}

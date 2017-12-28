@@ -20,7 +20,7 @@
     <ion-list style="position:relative">
 	 <ion-icon class="uploadimgicon" name="md-add"></ion-icon>
 	  <ion-item class="uploadimg">
-        <ion-input type="file" (change)="fileUpload($event)" accept="image/jpeg,image/jpg,image/png" name="image" placeholder="First Name"></ion-input>
+        <ion-input type="file" (change)="fileUpload($event)" accept="image/jpeg,image/jpg,image/png" name="image"></ion-input>
       </ion-item>
       <ion-item>
         <ion-input type="text" [(ngModel)]="userregister.fname" name="fname" placeholder="First Name"></ion-input>

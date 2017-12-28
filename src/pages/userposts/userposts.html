@@ -1,0 +1,29 @@
+<!--
+  Generated template for the UserpostsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>userposts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-label color="black" text-center>
+        <h3>All Post</h3>
+      </ion-label>
+  <div class="banner-sec" *ngFor = "let upost of userpost">
+    <ion-card>
+        <div class="person-imagess">
+            <img src="http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/postsimages/{{upost.image}}" />
+         </div>
+      <div class="card-title">{{upost.title}}</div>
+      <div class="card-content">{{upost.content}}</div>
+      </ion-card>
+  </div>
+</ion-content>

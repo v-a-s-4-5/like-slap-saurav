@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { UserProvider} from '../../providers/user/user';
 import { WelcomePage } from '../welcome/welcome';
+import { AddpostsPage } from '../addposts/addposts';
+import { UserpostsPage } from '../userposts/userposts';
+
 
 @Component({
   selector: 'page-home',
@@ -10,8 +13,10 @@ import { WelcomePage } from '../welcome/welcome';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public userProvider: UserProvider) {
+	userDetails = {};
 
+  constructor(public navCtrl: NavController, public userProvider: UserProvider,public modal: ModalController) {
+		this.getProfile();
   }
   profile(){
     this.userProvider.doLogout().subscribe( res=> {
@@ -26,6 +31,21 @@ export class HomePage {
 	    }, err => console.log(err));
 	        
 		   
-  }
+	}
+	addposts(){
+		//this.navCtrl.push(AddpostsPage);
+		this.modal.create(AddpostsPage).present();
+	}
 
+  getProfile(){
+
+	  this.userProvider.getProfile().subscribe( res=> {		  
+							let response = JSON.parse(res['_body']);
+							 this.userDetails = response.result;
+							console.log(response.result);	
+	    }, err => console.log(err));
+	}
+	userPosts(){
+		this.navCtrl.push(UserpostsPage);
+	}
 }

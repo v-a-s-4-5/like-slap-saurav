@@ -1,0 +1,45 @@
+<!--
+  Generated template for the AddpostsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <!--ion-title>addposts</ion-title-->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding align="center">
+  <div class="container">
+    <ion-label color="light" text-center>
+      <h3>Add Post</h3>
+    </ion-label>
+	<form (ngSubmit)="addposts()">
+      
+    <ion-list style="position:relative">
+        <ion-icon class="uploadimgicon" name="md-add"></ion-icon>
+        <ion-item class="uploadimg">
+            <ion-input type="file" (change)="fileUpload($event)" accept="image/jpeg,image/jpg,image/png" name="image" placeholder="First Name"></ion-input>
+          </ion-item>
+        <ion-item style="display:none">
+            <ion-input type="hidden" [(ngModel)]="postsadd.userid" name="userid"></ion-input>
+            </ion-item>
+	      <ion-item>
+        
+        <ion-input type="text" [(ngModel)]="postsadd.title" name="title" placeholder="Add Title"></ion-input>
+        </ion-item>
+      <ion-item>
+          <ion-textarea [(ngModel)]="postsadd.content" name="content" placeholder="Add Content"></ion-textarea>
+        </ion-item>
+     
+      
+    </ion-list>
+    <div class="login-btn">
+      <button ion-button outline block color="backgroundClr">Add Post</button>
+    </div>
+	</form>
+  </div>
+</ion-content>
