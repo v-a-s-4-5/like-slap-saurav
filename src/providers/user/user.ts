@@ -81,7 +81,7 @@ export class UserProvider {
       'user':user,
       'action': 106
     });
-    this.http.post(url,postjsondata,{headers:header}).subscribe( res=> console.log(res), err => console.log(err));
+    return this.http.post(url,postjsondata,{headers:header});
   }
   displayposts(id){	  
     let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
@@ -89,7 +89,7 @@ export class UserProvider {
       header.append('Content-Type','application/x-www-form-urlencoded');
       let postjsondata = 'data='+JSON.stringify({
         'id':id,
-      'action': 107
+      'action': 109
       });      
     return this.http.post(url,postjsondata,{headers:header});
   }
@@ -100,6 +100,16 @@ export class UserProvider {
       let postjsondata = 'data='+JSON.stringify({
         'id':id,
       'action': 108
+      });      
+    return this.http.post(url,postjsondata,{headers:header});
+  }
+  singleuserposts(id){	  
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+      let header = new Headers();
+      header.append('Content-Type','application/x-www-form-urlencoded');
+      let postjsondata = 'data='+JSON.stringify({
+        'id':id,
+      'action': 107
       });      
     return this.http.post(url,postjsondata,{headers:header});
   }

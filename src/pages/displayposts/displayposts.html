@@ -7,23 +7,84 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>displayposts</ion-title>
+    <div class="login-signup" right>
+      <ion-row>
+        
+          <ion-title (click)="loginPage()">Login</ion-title>
+          <ion-title text-center><b>Slap/Like</b></ion-title>      
+          <ion-title align="right" (click)="welcomepage()">SignUp</ion-title>
+        
+      </ion-row>
+
+
+    </div>
+
   </ion-navbar>
 
 </ion-header>
-
-
 <ion-content padding>
-    <ion-label color="black" text-center>
+  <!-- <ion-label color="black" text-center>
         <h3>All Post</h3>
-      </ion-label>
-  <div class="banner-sec" *ngFor = "let post of posts">
-    <ion-card>
-        <div class="person-imagess">
+      </ion-label> -->
+  <div class="banner-sec" *ngFor="let post of posts">
+    <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <ion-card>
+
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/images/{{post.profile_image}}" />
+            </ion-avatar>
+            <h2>{{post.firstname}} {{post.lastname}}</h2>
+            <!-- <div class="icons" align="right">
+              <ion-icon name="logo-facebook"></ion-icon>
+              <ion-icon name="logo-twitter"></ion-icon>
+              <ion-icon name="logo-instagram"></ion-icon>
+            </div> -->
+          </ion-item>
+
+          <div class="person-imagess">
             <img src="http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/postsimages/{{post.image}}" />
-         </div>
-      <div class="card-title">{{post.title}}</div>
-      <div class="card-content">{{post.content}}</div>
-      </ion-card>
+          </div>
+          <div class="card-title">{{post.title}}</div>
+          <div class="card-content">{{post.content}}</div>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>12 Likes</div>
+              </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                  <ion-icon name="thumbs-down"></ion-icon>
+                  <div>2 Slaps</div>
+                </button>
+              </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="text"></ion-icon>
+                <div>4 Comments</div>
+              </button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <button ion-button icon-left clear small>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
+                  <button ion-button icon-left clear small><ion-icon name="logo-twitter"></ion-icon></button>
+                  
+                  <button ion-button icon-left clear small><ion-icon name="logo-instagram"></ion-icon></button>
+                  
+              </ion-col>
+          </ion-row>
+
+
+        </ion-card>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
   </div>
 </ion-content>

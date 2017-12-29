@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams, AlertController } from 'ionic-angular';
 import { UserProvider } from '../../providers/user/user';
-
+import { SinglepostPage } from '../singlepost/singlepost';
 /**
  * Generated class for the UserpostsPage page.
  *
@@ -28,4 +28,9 @@ export class UserpostsPage {
     console.log('ionViewDidLoad UserpostsPage');
   }
 
+  openPost(post){
+    this.modalCtrl.create(SinglepostPage, {
+      data: post
+    }).present();
+  }
 }

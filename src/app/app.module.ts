@@ -16,6 +16,8 @@ import { ProfilePage } from '../pages/profile/profile';
 import { AddpostsPage } from '../pages/addposts/addposts';
 import { DisplaypostsPage } from '../pages/displayposts/displayposts';
 import { UserpostsPage } from '../pages/userposts/userposts';
+import { SinglepostPage } from '../pages/singlepost/singlepost';
+import { SingleuserpostsPage } from '../pages/singleuserposts/singleuserposts';
 @NgModule({
   declarations: [
     MyApp,
@@ -27,6 +29,8 @@ import { UserpostsPage } from '../pages/userposts/userposts';
     WelcomePage,
     AddpostsPage,
     DisplaypostsPage,
+    SinglepostPage,
+    SingleuserpostsPage,
     UserpostsPage
   ],
   imports: [
@@ -41,6 +45,8 @@ import { UserpostsPage } from '../pages/userposts/userposts';
     LoginPage,
     RegisterPage,
     ConfirmationPage,
+    SinglepostPage,
+    SingleuserpostsPage,
 	ProfilePage,
     WelcomePage,
     AddpostsPage,

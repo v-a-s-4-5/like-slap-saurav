@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, ViewController, NavController,LoadingController, NavParams, AlertController } from 'ionic-angular';
 import { UserProvider } from '../../providers/user/user';
 import { ImageinsertPage } from '../imageinsert/imageinsert';
 /**
@@ -23,14 +23,23 @@ export class AddpostsPage {
     content: '',
 	base64Data: ''
   }
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alert: AlertController, public modalCtrl: ModalController, public user: UserProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alert: AlertController,public loadingCtrl: LoadingController, public viewCtrl: ViewController, public user: UserProvider) {
    this.postsadd.userid = localStorage.getItem('id');
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddpostsPage');
   }
   addposts(){
-    this.user.addPosts(this.postsadd);
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+  
+    loading.present();
+    this.user.addPosts(this.postsadd).subscribe( res=> {
+      console.log(res);
+      loading.dismiss();
+      this.viewCtrl.dismiss();
+    }, err => console.log(err))
  }
  fileUpload(event) {
   let file = event.srcElement.files[0];

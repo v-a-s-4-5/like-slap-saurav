@@ -9,33 +9,40 @@
 
 
 <ion-content padding align="center">
-  <div class="container">
-    <div class="banner-sec">
-      <img src="./assets/imgs/banner.png" />
-    </div>
-    <div class="inner-sec">
-      <ion-label text-center>
-        <h3>
-          <b>Welcome to Slap/Like</b>
-        </h3>
-      </ion-label>
-      <div class="welcome-msg">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-      </div>
-      <div class="social-icons">
-        <div class="social-icon">
-          <img src="./assets/imgs/fb_icon.png" />
-        </div>
-        <div class="social-icon">
-          <img src="./assets/imgs/google_icon.png" />
-        </div>
-        <div class="social-icon">
-          <img src="./assets/imgs/email_icon.png" (click)="openLogin()" />
-        </div>
-      </div>
-      <div class="lower-sec">
-        <button ion-button block color="backgroundClr">SKIP REGISTRATION <ion-icon name="md-arrow-forward"></ion-icon></button>
-      </div>
-    </div>
-    </div>
+  <ion-row>
+    <ion-col col-1></ion-col>
+    <ion-col col-10>
+        <div class="container">
+            <div class="banner-sec">
+              <img src="./assets/imgs/banner.png" />
+            </div>
+            <div class="inner-sec">
+              <ion-label text-center>
+                <h3>
+                  <b>Welcome to Slap/Like</b>
+                </h3>
+              </ion-label>
+              <div class="welcome-msg">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+              <div class="social-icons">
+                <div class="social-icon">
+                  <img src="./assets/imgs/fb_icon.png" />
+                </div>
+                <div class="social-icon">
+                  <img src="./assets/imgs/google_icon.png" />
+                </div>
+                <div class="social-icon">
+                  <img src="./assets/imgs/email_icon.png" (click)="openLogin()" />
+                </div>
+              </div>
+              <div class="lower-sec">
+                <button ion-button block color="backgroundClr"(click)="displayposts()">SKIP REGISTRATION <ion-icon name="md-arrow-forward"></ion-icon></button>
+              </div>
+            </div>
+            </div>
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+  
 </ion-content>

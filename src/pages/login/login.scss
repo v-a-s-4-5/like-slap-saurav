@@ -1,12 +1,13 @@
 page-login {
     .scroll-content{
-        background: color($colors,backgroundClr);
+        //background: color($colors,backgroundClr);
         .container {
-            max-width: 400px;
+            max-width: 720px;
             margin: 0 auto;
             border: 1px solid #b2ceff;
             padding: 20px;
             width: 100%;
+            background: #19417e;
             .text-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 color: #ffffff;
                 font-weight: 300;
@@ -64,8 +65,9 @@ page-login {
                 .button {
                     background: #fff;
                     border-radius: 3px;
-                    margin: 25px 0;
+                    margin: 25px auto;
                     font-weight: 900;
+                    width: 60%;
                 }
             }
             ion-label.label {

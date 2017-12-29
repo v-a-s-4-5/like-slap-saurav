@@ -14,7 +14,7 @@ import { UserpostsPage } from '../pages/userposts/userposts';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WelcomePage;
+  rootPage: any = DisplaypostsPage;
 
   pages: Array<{title: string, component: any}>;
 

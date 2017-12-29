@@ -1,3 +1,26 @@
 page-displayposts {
-
+    .card-title {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    .card-content {
+        font-size: 14px;
+        margin: 10px;
+        line-height: 24px;
+        padding: 0px;
+    }
+    .icons ion-icon {
+        color: #19417e;
+        margin: 0 5px;
+        font-size: 20px;
+        padding: 0px;
+    }
+    h2.name_sec {
+        margin: 15px 0 !important;
+    }
+    .icons {
+        margin: 15px 0;
+    }
 }

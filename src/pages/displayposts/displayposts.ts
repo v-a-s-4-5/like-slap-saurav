@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams, AlertController } from 'ionic-angular';
 import { UserProvider } from '../../providers/user/user';
+import { WelcomePage } from '../../pages/welcome/welcome';
+import { LoginPage } from '../../pages/login/login';
 /**
  * Generated class for the DisplaypostsPage page.
  *
@@ -26,5 +28,10 @@ export class DisplaypostsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DisplaypostsPage');
   }
-  
+  welcomepage(){
+    this.navCtrl.push(WelcomePage);
+  }
+  loginPage(){
+    this.navCtrl.push(LoginPage);
+  }
 }
