@@ -23,10 +23,7 @@
 
 </ion-header>
 <ion-content padding>
-  <!-- <ion-label color="black" text-center>
-        <h3>All Post</h3>
-      </ion-label> -->
-  <div class="banner-sec" *ngFor="let post of posts">
+   <div class="banner-sec" *ngFor="let post of posts">
     <ion-row>
       <ion-col col-1></ion-col>
       <ion-col col-10>
@@ -37,11 +34,6 @@
               <img src="http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/images/{{post.profile_image}}" />
             </ion-avatar>
             <h2>{{post.firstname}} {{post.lastname}}</h2>
-            <!-- <div class="icons" align="right">
-              <ion-icon name="logo-facebook"></ion-icon>
-              <ion-icon name="logo-twitter"></ion-icon>
-              <ion-icon name="logo-instagram"></ion-icon>
-            </div> -->
           </ion-item>
 
           <div class="person-imagess">
@@ -53,19 +45,20 @@
             <ion-col>
               <button ion-button icon-left clear small>
                 <ion-icon name="thumbs-up"></ion-icon>
-                <div>12 Likes</div>
+                <div>{{post.like}} Likes</div>
               </button>
             </ion-col>
             <ion-col>
                 <button ion-button icon-left clear small>
                   <ion-icon name="thumbs-down"></ion-icon>
-                  <div>2 Slaps</div>
+                  <div>{{post.slap}} Slaps</div>
                 </button>
               </ion-col>
             <ion-col>
               <button ion-button icon-left clear small>
                 <ion-icon name="text"></ion-icon>
-                <div>4 Comments</div>
+                <div>{{post.comments}} Comments</div>
+                <div>{{post.comment}}</div>
               </button>
             </ion-col>
           </ion-row>
@@ -75,14 +68,10 @@
                   <ion-icon name="logo-facebook"></ion-icon>
                   </button>
                   <button ion-button icon-left clear small><ion-icon name="logo-twitter"></ion-icon></button>
-                  
                   <button ion-button icon-left clear small><ion-icon name="logo-instagram"></ion-icon></button>
-                  
-              </ion-col>
+               </ion-col>
           </ion-row>
-
-
-        </ion-card>
+       </ion-card>
       </ion-col>
       <ion-col col-1></ion-col>
     </ion-row>
