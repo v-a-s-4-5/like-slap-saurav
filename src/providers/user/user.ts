@@ -83,12 +83,11 @@ export class UserProvider {
     });
     return this.http.post(url,postjsondata,{headers:header});
   }
-  displayposts(id){	  
+  displayposts(){	  
     let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
       let header = new Headers();
       header.append('Content-Type','application/x-www-form-urlencoded');
       let postjsondata = 'data='+JSON.stringify({
-        'id':id,
       'action': 109
       });      
     return this.http.post(url,postjsondata,{headers:header});
@@ -113,5 +112,43 @@ export class UserProvider {
       });      
     return this.http.post(url,postjsondata,{headers:header});
   }
- 
+
+  getComments(postId){	  
+    console.log(postId);
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+      let header = new Headers();
+      header.append('Content-Type','application/x-www-form-urlencoded');
+      let postjsondata = 'data='+JSON.stringify({
+      'id':postId,
+      'action': 110
+      });      
+    return this.http.post(url,postjsondata,{headers:header});
+  }
+  addComment(postId, comment){	  
+    let id = localStorage.getItem('id');
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+      let header = new Headers();
+      header.append('Content-Type','application/x-www-form-urlencoded');
+      let postjsondata = 'data='+JSON.stringify({
+      'postId':postId,
+      'userId':id,
+      'comment' :comment,
+      'action': 111
+      });
+      console.log(postjsondata);      
+    return this.http.post(url,postjsondata,{headers:header});
+  }
+  displaylike(postId){
+    let id = localStorage.getItem('id');
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+      let header = new Headers();
+      header.append('Content-Type','application/x-www-form-urlencoded');
+      let postjsondata = 'data='+JSON.stringify({
+      'postId':postId,
+      'userId':id,
+      'action': 112
+      });
+      console.log(postjsondata);      
+    return this.http.post(url,postjsondata,{headers:header});
+  }
 }

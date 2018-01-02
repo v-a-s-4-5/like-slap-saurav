@@ -18,6 +18,8 @@ import { DisplaypostsPage } from '../pages/displayposts/displayposts';
 import { UserpostsPage } from '../pages/userposts/userposts';
 import { SinglepostPage } from '../pages/singlepost/singlepost';
 import { SingleuserpostsPage } from '../pages/singleuserposts/singleuserposts';
+import { DisplaycommentsPage } from '../pages/displaycomments/displaycomments';
+import { AllpostsPage } from '../pages/allposts/allposts';
 @NgModule({
   declarations: [
     MyApp,
@@ -31,6 +33,8 @@ import { SingleuserpostsPage } from '../pages/singleuserposts/singleuserposts';
     DisplaypostsPage,
     SinglepostPage,
     SingleuserpostsPage,
+    DisplaycommentsPage,
+    AllpostsPage,
     UserpostsPage
   ],
   imports: [
@@ -47,10 +51,12 @@ import { SingleuserpostsPage } from '../pages/singleuserposts/singleuserposts';
     ConfirmationPage,
     SinglepostPage,
     SingleuserpostsPage,
+    AllpostsPage,
 	ProfilePage,
     WelcomePage,
     AddpostsPage,
     DisplaypostsPage,
+    DisplaycommentsPage,
     UserpostsPage
   ],
   providers: [

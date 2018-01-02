@@ -57,8 +57,7 @@
             <ion-col>
               <button ion-button icon-left clear small>
                 <ion-icon name="text"></ion-icon>
-                <div>{{post.comments}} Comments</div>
-                <div>{{post.comment}}</div>
+                <div (click)="displaycomments(post.post_id)">{{post.comments}} Comments</div>
               </button>
             </ion-col>
           </ion-row>
