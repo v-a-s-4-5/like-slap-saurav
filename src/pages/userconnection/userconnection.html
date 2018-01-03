@@ -1,0 +1,47 @@
+<!--
+  Generated template for the UserconnectionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>userconnection</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="banner-sec" *ngFor="let usercon of userconnection">
+    <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <ion-card>
+
+          <ion-row>
+            <ion-col col-2>
+              <ion-avatar item-start>
+                <img src="http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/images/{{usercon.profile_image}}" />
+              </ion-avatar>
+            </ion-col>
+            <ion-col col-7>
+              <h2>{{usercon.firstname}} {{usercon.lastname}}</h2>
+              <p>{{usercon.email}}</p>
+              <p>{{usercon.mobileno}}</p>
+            </ion-col>
+
+            <ion-col col-3 align="right">
+              <div class="lower-secs" align="right">
+                <button ion-button small color="danger" (click)="sendRequest(usercon.user_id)">Send Request</button>
+              </div>
+             
+            </ion-col>
+
+          </ion-row>
+        </ion-card>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </div>
+</ion-content>

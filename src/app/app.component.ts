@@ -9,6 +9,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { DisplaypostsPage } from '../pages/displayposts/displayposts';
 import { UserpostsPage } from '../pages/userposts/userposts';
 import { AllpostsPage } from '../pages/allposts/allposts';
+import { UserconnectionPage } from '../pages/userconnection/userconnection';
 @Component({
   templateUrl: 'app.html'
 })

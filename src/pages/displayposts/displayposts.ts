@@ -18,7 +18,7 @@ import { DisplaycommentsPage } from '../displaycomments/displaycomments';
 })
 export class DisplaypostsPage {
 
- posts = [];
+   posts = [];
    constructor(public navCtrl: NavController, public navParams: NavParams, public alert: AlertController, public modalCtrl: ModalController, public user: UserProvider) {
      this.user.displayposts().subscribe( res=> {		  
       let response = JSON.parse(res['_body']);
@@ -42,6 +42,12 @@ export class DisplaypostsPage {
   }
   displaylikes(postId){
     this.user.displaylike(postId).subscribe( res=> {
+      console.log(res);
+   })
+
+  }
+  displaySlap(postId){
+    this.user.displaySlaps(postId).subscribe( res=> {
       console.log(res);
    })
 

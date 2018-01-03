@@ -10,6 +10,11 @@ page-home {
                 float: left;
                 padding: 10px;
             }
+            button.receiver_btn {
+                position: absolute;
+                right: 12px;
+                top: 16px;
+            }
             .banner-sec{
                 ion-card {
                     position: relative;
@@ -82,7 +87,7 @@ page-home {
                 }
             }
             .inner-sec{
-                padding: 20px;
+                padding: 0px 0px 10px;
                 ion-chip.chip {
                     background: none;
                     border: 1px solid #ddd;
@@ -97,6 +102,7 @@ page-home {
                     margin: 0 auto;
                     margin-top: 32px;
                 }
+              
             }
         }
     }

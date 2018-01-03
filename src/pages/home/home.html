@@ -45,29 +45,24 @@
         </ion-col>
         <ion-col col-6>
           <ion-label>{{userDetails.posts}}</ion-label>
-          <p>CONNECTIONS</p>
+          <p (click)="userConnection()">CONNECTIONS</p>
         </ion-col>
       </ion-row>
     </div>
+    
+    <ion-list *ngFor="let recieveDetail of recieverDetails">
+        <ion-item>
+          <ion-avatar item-start>
+              <img src="http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/images/{{recieveDetail.profile_image}}" />
+          </ion-avatar>
+          <h2> {{recieveDetail.firstname}} {{recieveDetail.lastname}} </h2>
+          <button class="receiver_btn" ion-button small>Recieve Request</button>
+       </ion-item>
+      
+      </ion-list>
+
     <div class="inner-sec">
-      <!--div class="interest-sec">
-        <ion-label text-left>
-          <h3>Similar Interest</h3>
-        </ion-label>
-        <ion-chip>
-          <ion-label>tag #1</ion-label>
-        </ion-chip>
-        <ion-chip>
-          <ion-label>tag #2</ion-label>
-        </ion-chip>
-        <ion-chip>
-          <ion-label>tag #3</ion-label>
-        </ion-chip>
-        <ion-chip>
-          <ion-label>tag #4</ion-label>
-        </ion-chip>
-      </div-->
-      <div class="lower-sec">
+         <div class="lower-sec">
           <button ion-button block color="danger">CONNECT</button>
         </div>
     </div>

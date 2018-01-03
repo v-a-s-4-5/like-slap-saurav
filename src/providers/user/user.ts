@@ -151,4 +151,52 @@ export class UserProvider {
       console.log(postjsondata);      
     return this.http.post(url,postjsondata,{headers:header});
   }
+  displaySlaps(postId){
+    let id = localStorage.getItem('id');
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+      let header = new Headers();
+      header.append('Content-Type','application/x-www-form-urlencoded');
+      let postjsondata = 'data='+JSON.stringify({
+      'postId':postId,
+      'userId':id,
+      'action': 113
+      });
+      console.log(postjsondata);      
+    return this.http.post(url,postjsondata,{headers:header});
+  }
+  userConnection(id){
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+    let header = new Headers();
+    header.append('Content-Type','application/x-www-form-urlencoded');
+    let postjsondata = 'data='+JSON.stringify({
+        'id' : id,
+      'action': 114
+    });      
+  return this.http.post(url,postjsondata,{headers:header});
+  }
+
+  getReciever(id){
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+    let header = new Headers();
+    header.append('Content-Type','application/x-www-form-urlencoded');
+    let postjsondata = 'data='+JSON.stringify({
+      'recieverid' : id,
+      'action': 116
+  });
+  return this.http.post(url,postjsondata,{headers:header});
+}
+  recieverConn(receiverId){
+    let id = localStorage.getItem('id');
+    let url = 'http://studio45creations.ipage.com/projects/dev1/schoolmanagment/slaplike/index.php';
+      let header = new Headers();
+      header.append('Content-Type','application/x-www-form-urlencoded');
+      let postjsondata = 'data='+JSON.stringify({
+      'recieverId':receiverId,
+      'id':id,
+      'action': 117
+      });
+      console.log(postjsondata);      
+    return this.http.post(url,postjsondata,{headers:header});
+  }
+ 
 }

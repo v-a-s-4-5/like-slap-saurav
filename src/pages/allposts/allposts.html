@@ -32,13 +32,13 @@
              <ion-col>
                <button ion-button icon-left clear small>
                  <ion-icon name="thumbs-up"></ion-icon>
-                 <div (click)="displaylikes(post.post_id)">{{post.like}} Likes</div>
+                 <div (click)="displaylikes(post.post_id)">{{post.view_like}} Likes</div>
                </button>
              </ion-col>
              <ion-col>
                  <button ion-button icon-left clear small>
                    <ion-icon name="thumbs-down"></ion-icon>
-                   <div>{{post.slap}} Slaps</div>
+                   <div (click)="displaySlap(post.post_id)">{{post.slap}} Slaps</div>
                  </button>
                </ion-col>
              <ion-col>

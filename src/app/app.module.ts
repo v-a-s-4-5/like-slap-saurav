@@ -20,6 +20,8 @@ import { SinglepostPage } from '../pages/singlepost/singlepost';
 import { SingleuserpostsPage } from '../pages/singleuserposts/singleuserposts';
 import { DisplaycommentsPage } from '../pages/displaycomments/displaycomments';
 import { AllpostsPage } from '../pages/allposts/allposts';
+import { UserconnectionPage } from '../pages/userconnection/userconnection';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -35,6 +37,7 @@ import { AllpostsPage } from '../pages/allposts/allposts';
     SingleuserpostsPage,
     DisplaycommentsPage,
     AllpostsPage,
+    UserconnectionPage,
     UserpostsPage
   ],
   imports: [
@@ -57,6 +60,7 @@ import { AllpostsPage } from '../pages/allposts/allposts';
     AddpostsPage,
     DisplaypostsPage,
     DisplaycommentsPage,
+    UserconnectionPage,
     UserpostsPage
   ],
   providers: [

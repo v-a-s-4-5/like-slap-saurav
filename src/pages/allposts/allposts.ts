@@ -20,8 +20,7 @@ export class AllpostsPage {
   posts = [];
   postId: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alert: AlertController, public modalCtrl: ModalController, public user: UserProvider) {
-    this.postId = this.navParams.get('id');
-    this.user.displayposts(localStorage.getItem(this.postId)).subscribe( res=> {		  
+    this.user.displayposts().subscribe( res=> {		  
       let response = JSON.parse(res['_body']);
        this.posts = response.result;
       console.log(this.posts);	
@@ -37,8 +36,15 @@ export class AllpostsPage {
     }).present();
   }
   displaylikes(postId){
-    //console.log("postId"+postId);
+    console.log("postId"+postId);
     this.user.displaylike(postId).subscribe( res=> {
+      console.log(res);
+   })
+
+  }
+  displaySlap(postId){
+    console.log("postId"+postId);
+    this.user.displaySlaps(postId).subscribe( res=> {
       console.log(res);
    })
 
